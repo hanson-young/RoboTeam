@@ -1,0 +1,10 @@
+.\build\module.o: ..\..\src\module.c
+.\build\module.o: ..\..\include\rthw.h
+.\build\module.o: ..\..\include\rtthread.h
+.\build\module.o: ..\..\include\rtdef.h
+.\build\module.o: .\rtconfig.h
+.\build\module.o: D:\setup\Mdk_keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\build\module.o: ..\..\include\rtdebug.h
+.\build\module.o: ..\..\include\rtservice.h
+.\build\module.o: ..\..\include\rtm.h
+.\build\module.o: ..\..\include\rtthread.h

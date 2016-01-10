@@ -1,0 +1,5 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork -I..\kaiguan -I.\CORE -I.\FLib\inc -I.\USER -I.\Owner 
+-I D:\setup\Mdk_keil\ARM\RV31\INC 
+-I D:\setup\Mdk_keil\ARM\CMSIS\Include 
+-I D:\setup\Mdk_keil\ARM\Inc\ST\STM32F10x 
+-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o "systick.o" --omf_browse "systick.crf" --depend "systick.d" "Owner\SysTick.c"
