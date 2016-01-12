@@ -64,7 +64,7 @@ NO.5~0	[	ID numbers				|	ID numbers  &  Others		]
 		W_MOTOR2_OLD_ID		= 0xa1,
 		S_MOTOR2_ENC_ID		= 0xa9,
 		//W_UP_PWM_ID=0xc7,
-			W_BAT_ID		= 0xc7,
+			W_FAN_ID		= 0xc7,
 		S_Play_ID=0xc8
 	
 	}ID_NUMDEF;	
@@ -109,7 +109,7 @@ NO.5~0	[	ID numbers				|	ID numbers  &  Others		]
 	extern union fi32_to_u8 MOSI_MOTOR_ANGLE;
 	extern union fi32_to_u8 MOSI_FACTOR;
 	
-	extern union u16_to_u8 MOSI_BAT;
+	extern union fi32_to_u8 MOSI_FAN;
 	extern uint8_t MISO_M5_ENC[7];
 	extern uint8_t MOSI_MOTOR5_OLD[8];
 	extern uint8_t MOSI_MOTOR3_OLD[8];

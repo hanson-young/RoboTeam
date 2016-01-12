@@ -1,9 +1,9 @@
 <!doctype html public "-//w3c//dtd html 4.0 transitional//en">
 <html><head>
-<title>Static Call Graph - [E:\robocon\program\WorkSpace0109\On_Off_status2016.1.9\On_Off_status\On_Off_Status.axf]</title></head>
+<title>Static Call Graph - [E:\robocon\git\robot\On_Off_status2016.1.10\On_Off_status\On_Off_Status.axf]</title></head>
 <body><HR>
-<H1>Static Call Graph for image E:\robocon\program\WorkSpace0109\On_Off_status2016.1.9\On_Off_status\On_Off_Status.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 69]: Last Updated: Sun Jan 10 17:42:34 2016
+<H1>Static Call Graph for image E:\robocon\git\robot\On_Off_status2016.1.10\On_Off_status\On_Off_Status.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 69]: Last Updated: Mon Jan 11 14:36:20 2016
 <BR><P>
 <H3>Maximum Stack Usage =        100 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -54,7 +54,7 @@ Function Pointers
  <LI><a href="#[37]">RTCAlarm_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[11]">RTC_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[4]">Reset_Handler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
- <LI><a href="#[3]">SET_BAT_FUNC</a> from command.o(.text) referenced 2 times from can_database.o(.data)
+ <LI><a href="#[3]">SET_FAN_FUNC</a> from command.o(.text) referenced 2 times from can_database.o(.data)
  <LI><a href="#[31]">SPI1_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[32]">SPI2_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[a]">SVC_Handler</a> from stm32f10x_it.o(.text) referenced from startup_stm32f10x_md.o(RESET)
@@ -1216,7 +1216,6 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Write_Database
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Moto_Clear_NPos
-<LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SET_BAT_FUNC
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Moto_Stop
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Moto_Set_GSpeed
 </UL>
@@ -1265,11 +1264,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 </UL>
 
-<P><STRONG><a name="[3]"></a>SET_BAT_FUNC</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, command.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = SET_BAT_FUNC &rArr; W_MOTOR_OLD_FUNC &rArr; Write_Database &rArr; Can_SendData &rArr; CAN_Transmit
-</UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W_MOTOR_OLD_FUNC
-</UL>
+<P><STRONG><a name="[3]"></a>SET_FAN_FUNC</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, command.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> can_database.o(.data)
 </UL>
 <P><STRONG><a name="[a4]"></a>Moto_Clear_NPos</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, command.o(.text), UNUSED)

@@ -74,7 +74,7 @@ Section Cross References
     can_database.o(.data) refers to can_database.o(.data) for MISO_M6_ENC
     can_database.o(.data) refers to can_database.o(.data) for MOSI_MOTOR1_OLD
     can_database.o(.data) refers to can_database.o(.data) for MOSI_MOTOR2_OLD
-    can_database.o(.data) refers to can_database.o(.data) for MOSI_BAT
+    can_database.o(.data) refers to can_database.o(.data) for MOSI_FAN
     command.o(.text) refers to can_database.o(.text) for Write_Database
     command.o(.text) refers to pwm.o(.text) for PWM2_SetDuty
     command.o(.text) refers to can_database.o(.data) for HASH_TABLE
@@ -85,7 +85,6 @@ Section Cross References
     command.o(.text) refers to command.o(.bss) for .bss
     command.o(.text) refers to can_database.o(.data) for MISO_M6_ENC
     command.o(.text) refers to can_database.o(.data) for MOSI_SWITCH
-    command.o(.text) refers to can_database.o(.data) for MOSI_BAT
     systick.o(.text) refers to stm32f10x_gpio.o(.text) for GPIO_ResetBits
     systick.o(.text) refers to system_stm32f10x.o(.data) for SystemCoreClock
     systick.o(.text) refers to systick.o(.data) for .data
@@ -231,17 +230,17 @@ Image Symbol Table
     .text                                    0x08002500   Section        0  can.o(.text)
     .text                                    0x080027a0   Section        0  can_database.o(.text)
     .text                                    0x08002840   Section        0  command.o(.text)
-    .text                                    0x080029c0   Section        0  systick.o(.text)
-    .text                                    0x08002a58   Section        0  uart.o(.text)
-    .text                                    0x08002c30   Section        0  fadd.o(.text)
-    .text                                    0x08002ce0   Section        0  fdiv.o(.text)
-    .text                                    0x08002d60   Section        0  fepilogue.o(.text)
-    .text                                    0x08002d60   Section        0  iusefp.o(.text)
-    .text                                    0x08002dcc   Section       36  init.o(.text)
-    .text                                    0x08002df0   Section        0  __dczerorl2.o(.text)
-    i.__scatterload_copy                     0x08002e4c   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08002e5a   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x08002e5c   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .text                                    0x08002998   Section        0  systick.o(.text)
+    .text                                    0x08002a30   Section        0  uart.o(.text)
+    .text                                    0x08002c08   Section        0  fadd.o(.text)
+    .text                                    0x08002cb8   Section        0  fdiv.o(.text)
+    .text                                    0x08002d38   Section        0  fepilogue.o(.text)
+    .text                                    0x08002d38   Section        0  iusefp.o(.text)
+    .text                                    0x08002da4   Section       36  init.o(.text)
+    .text                                    0x08002dc8   Section        0  __dczerorl2.o(.text)
+    i.__scatterload_copy                     0x08002e24   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08002e32   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08002e34   Section       14  handlers.o(i.__scatterload_zeroinit)
     .data                                    0x20000000   Section        4  main.o(.data)
     .data                                    0x20000004   Section       20  system_stm32f10x.o(.data)
     .data                                    0x20000018   Section       20  stm32f10x_rcc.o(.data)
@@ -258,20 +257,20 @@ Image Symbol Table
     .data                                    0x20000278   Section        8  can_database.o(.data)
     .data                                    0x20000280   Section        4  can_database.o(.data)
     .data                                    0x20000284   Section        4  can_database.o(.data)
-    .data                                    0x20000288   Section        2  can_database.o(.data)
-    .data                                    0x2000028a   Section        8  can_database.o(.data)
-    .data                                    0x20000292   Section        8  can_database.o(.data)
-    .data                                    0x2000029a   Section        8  can_database.o(.data)
-    .data                                    0x200002a2   Section        7  can_database.o(.data)
-    .data                                    0x200002a9   Section        7  can_database.o(.data)
-    .data                                    0x200002b0   Section        8  can_database.o(.data)
-    .data                                    0x200002b8   Section        8  can_database.o(.data)
-    .data                                    0x200002c0   Section        8  command.o(.data)
-    .data                                    0x200002c8   Section        8  systick.o(.data)
-    i                                        0x200002c8   Data           4  systick.o(.data)
-    TimingDelay                              0x200002cc   Data           4  systick.o(.data)
-    .bss                                     0x200002d0   Section       26  pwm.o(.bss)
-    .bss                                     0x200002ec   Section       48  command.o(.bss)
+    .data                                    0x20000288   Section        4  can_database.o(.data)
+    .data                                    0x2000028c   Section        8  can_database.o(.data)
+    .data                                    0x20000294   Section        8  can_database.o(.data)
+    .data                                    0x2000029c   Section        8  can_database.o(.data)
+    .data                                    0x200002a4   Section        7  can_database.o(.data)
+    .data                                    0x200002ab   Section        7  can_database.o(.data)
+    .data                                    0x200002b2   Section        8  can_database.o(.data)
+    .data                                    0x200002ba   Section        8  can_database.o(.data)
+    .data                                    0x200002c2   Section        8  command.o(.data)
+    .data                                    0x200002cc   Section        8  systick.o(.data)
+    i                                        0x200002cc   Data           4  systick.o(.data)
+    TimingDelay                              0x200002d0   Data           4  systick.o(.data)
+    .bss                                     0x200002d4   Section       26  pwm.o(.bss)
+    .bss                                     0x200002f0   Section       48  command.o(.bss)
     STACK                                    0x20000320   Section     1024  startup_stm32f10x_md.o(STACK)
 
     Global Symbols
@@ -588,34 +587,34 @@ Image Symbol Table
     S_MOTOR6_ENC_FUNC                        0x0800291d   Thumb Code    52  command.o(.text)
     S_Prepare_FUNC                           0x08002951   Thumb Code    18  command.o(.text)
     Moto_Stop                                0x08002963   Thumb Code     8  command.o(.text)
-    SET_BAT_FUNC                             0x0800296b   Thumb Code    32  command.o(.text)
-    Moto_Clear_NPos                          0x0800298b   Thumb Code     8  command.o(.text)
-    SysTick_init                             0x080029c1   Thumb Code    48  systick.o(.text)
-    delay                                    0x080029f1   Thumb Code    16  systick.o(.text)
-    TimingDelay_Decrement                    0x08002a01   Thumb Code    16  systick.o(.text)
-    SysTick_Handler                          0x08002a11   Thumb Code    54  systick.o(.text)
-    Uart2_Init                               0x08002a59   Thumb Code   178  uart.o(.text)
-    USART1_Configuration                     0x08002b0b   Thumb Code   154  uart.o(.text)
-    Get_Distance1                            0x08002ba5   Thumb Code     8  uart.o(.text)
-    Get_Distance2                            0x08002bad   Thumb Code     8  uart.o(.text)
-    USART2_IRQHandler                        0x08002bb5   Thumb Code    48  uart.o(.text)
-    USART1_IRQHandler                        0x08002be5   Thumb Code    56  uart.o(.text)
-    __aeabi_fadd                             0x08002c31   Thumb Code   164  fadd.o(.text)
-    __aeabi_fsub                             0x08002cd5   Thumb Code     6  fadd.o(.text)
-    __aeabi_frsub                            0x08002cdb   Thumb Code     6  fadd.o(.text)
-    __aeabi_fdiv                             0x08002ce1   Thumb Code   128  fdiv.o(.text)
-    __I$use$fp                               0x08002d61   Thumb Code     0  iusefp.o(.text)
-    _float_round                             0x08002d61   Thumb Code    18  fepilogue.o(.text)
-    _float_epilogue                          0x08002d73   Thumb Code    90  fepilogue.o(.text)
-    __scatterload                            0x08002dcd   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x08002dcd   Thumb Code     0  init.o(.text)
-    __decompress                             0x08002df1   Thumb Code     0  __dczerorl2.o(.text)
-    __decompress1                            0x08002df1   Thumb Code    92  __dczerorl2.o(.text)
-    __scatterload_copy                       0x08002e4d   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08002e5b   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x08002e5d   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    Region$$Table$$Base                      0x08002e6c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08002e8c   Number         0  anon$$obj.o(Region$$Table)
+    SET_FAN_FUNC                             0x0800296b   Thumb Code     2  command.o(.text)
+    Moto_Clear_NPos                          0x0800296d   Thumb Code     8  command.o(.text)
+    SysTick_init                             0x08002999   Thumb Code    48  systick.o(.text)
+    delay                                    0x080029c9   Thumb Code    16  systick.o(.text)
+    TimingDelay_Decrement                    0x080029d9   Thumb Code    16  systick.o(.text)
+    SysTick_Handler                          0x080029e9   Thumb Code    54  systick.o(.text)
+    Uart2_Init                               0x08002a31   Thumb Code   178  uart.o(.text)
+    USART1_Configuration                     0x08002ae3   Thumb Code   154  uart.o(.text)
+    Get_Distance1                            0x08002b7d   Thumb Code     8  uart.o(.text)
+    Get_Distance2                            0x08002b85   Thumb Code     8  uart.o(.text)
+    USART2_IRQHandler                        0x08002b8d   Thumb Code    48  uart.o(.text)
+    USART1_IRQHandler                        0x08002bbd   Thumb Code    56  uart.o(.text)
+    __aeabi_fadd                             0x08002c09   Thumb Code   164  fadd.o(.text)
+    __aeabi_fsub                             0x08002cad   Thumb Code     6  fadd.o(.text)
+    __aeabi_frsub                            0x08002cb3   Thumb Code     6  fadd.o(.text)
+    __aeabi_fdiv                             0x08002cb9   Thumb Code   128  fdiv.o(.text)
+    __I$use$fp                               0x08002d39   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x08002d39   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x08002d4b   Thumb Code    90  fepilogue.o(.text)
+    __scatterload                            0x08002da5   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x08002da5   Thumb Code     0  init.o(.text)
+    __decompress                             0x08002dc9   Thumb Code     0  __dczerorl2.o(.text)
+    __decompress1                            0x08002dc9   Thumb Code    92  __dczerorl2.o(.text)
+    __scatterload_copy                       0x08002e25   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08002e33   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08002e35   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    Region$$Table$$Base                      0x08002e44   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08002e64   Number         0  anon$$obj.o(Region$$Table)
     pwm1_2_Freqz                             0x20000000   Data           2  main.o(.data)
     pwm3_4_Freqz                             0x20000002   Data           2  main.o(.data)
     SystemCoreClock                          0x20000004   Data           4  system_stm32f10x.o(.data)
@@ -640,19 +639,19 @@ Image Symbol Table
     MOSI_UP_PWM                              0x20000278   Data           8  can_database.o(.data)
     MOSI_MOTOR_ANGLE                         0x20000280   Data           4  can_database.o(.data)
     MOSI_FACTOR                              0x20000284   Data           4  can_database.o(.data)
-    MOSI_BAT                                 0x20000288   Data           2  can_database.o(.data)
-    MOSI_MOTOR5_OLD                          0x2000028a   Data           8  can_database.o(.data)
-    MOSI_MOTOR3_OLD                          0x20000292   Data           8  can_database.o(.data)
-    MOSI_MOTOR6_OLD                          0x2000029a   Data           8  can_database.o(.data)
-    MISO_M5_ENC                              0x200002a2   Data           7  can_database.o(.data)
-    MISO_M6_ENC                              0x200002a9   Data           7  can_database.o(.data)
-    MOSI_MOTOR1_OLD                          0x200002b0   Data           8  can_database.o(.data)
-    MOSI_MOTOR2_OLD                          0x200002b8   Data           8  can_database.o(.data)
-    IO_State                                 0x200002c0   Data           8  command.o(.data)
-    TIM_TimeBaseStructure                    0x200002d0   Data          10  pwm.o(.bss)
-    TIM_OCInitStruct                         0x200002da   Data          16  pwm.o(.bss)
-    Motor_Pos                                0x200002ec   Data          32  command.o(.bss)
-    Motor_RealAim                            0x2000030c   Data          16  command.o(.bss)
+    MOSI_FAN                                 0x20000288   Data           4  can_database.o(.data)
+    MOSI_MOTOR5_OLD                          0x2000028c   Data           8  can_database.o(.data)
+    MOSI_MOTOR3_OLD                          0x20000294   Data           8  can_database.o(.data)
+    MOSI_MOTOR6_OLD                          0x2000029c   Data           8  can_database.o(.data)
+    MISO_M5_ENC                              0x200002a4   Data           7  can_database.o(.data)
+    MISO_M6_ENC                              0x200002ab   Data           7  can_database.o(.data)
+    MOSI_MOTOR1_OLD                          0x200002b2   Data           8  can_database.o(.data)
+    MOSI_MOTOR2_OLD                          0x200002ba   Data           8  can_database.o(.data)
+    IO_State                                 0x200002c2   Data           8  command.o(.data)
+    TIM_TimeBaseStructure                    0x200002d4   Data          10  pwm.o(.bss)
+    TIM_OCInitStruct                         0x200002de   Data          16  pwm.o(.bss)
+    Motor_Pos                                0x200002f0   Data          32  command.o(.bss)
+    Motor_RealAim                            0x20000310   Data          16  command.o(.bss)
     __initial_sp                             0x20000720   Data           0  startup_stm32f10x_md.o(STACK)
 
 
@@ -663,9 +662,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000315c, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x00002f1c])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00003138, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x00002ef4])
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00002e8c, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00002e64, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -696,20 +695,20 @@ Memory Map of the image
     0x08002328   0x000001d8   Code   RO          392    .text               pwm.o
     0x08002500   0x000002a0   Code   RO          409    .text               can.o
     0x080027a0   0x000000a0   Code   RO          422    .text               can_database.o
-    0x08002840   0x00000180   Code   RO          455    .text               command.o
-    0x080029c0   0x00000098   Code   RO          481    .text               systick.o
-    0x08002a58   0x000001d8   Code   RO          500    .text               uart.o
-    0x08002c30   0x000000b0   Code   RO          515    .text               mf_w.l(fadd.o)
-    0x08002ce0   0x00000080   Code   RO          517    .text               mf_w.l(fdiv.o)
-    0x08002d60   0x00000000   Code   RO          533    .text               mc_w.l(iusefp.o)
-    0x08002d60   0x0000006c   Code   RO          534    .text               mf_w.l(fepilogue.o)
-    0x08002dcc   0x00000024   Code   RO          536    .text               mc_w.l(init.o)
-    0x08002df0   0x0000005c   Code   RO          546    .text               mc_w.l(__dczerorl2.o)
-    0x08002e4c   0x0000000e   Code   RO          540    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08002e5a   0x00000002   Code   RO          541    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08002e5c   0x0000000e   Code   RO          542    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08002e6a   0x00000002   PAD
-    0x08002e6c   0x00000020   Data   RO          538    Region$$Table       anon$$obj.o
+    0x08002840   0x00000158   Code   RO          455    .text               command.o
+    0x08002998   0x00000098   Code   RO          481    .text               systick.o
+    0x08002a30   0x000001d8   Code   RO          500    .text               uart.o
+    0x08002c08   0x000000b0   Code   RO          515    .text               mf_w.l(fadd.o)
+    0x08002cb8   0x00000080   Code   RO          517    .text               mf_w.l(fdiv.o)
+    0x08002d38   0x00000000   Code   RO          533    .text               mc_w.l(iusefp.o)
+    0x08002d38   0x0000006c   Code   RO          534    .text               mf_w.l(fepilogue.o)
+    0x08002da4   0x00000024   Code   RO          536    .text               mc_w.l(init.o)
+    0x08002dc8   0x0000005c   Code   RO          546    .text               mc_w.l(__dczerorl2.o)
+    0x08002e24   0x0000000e   Code   RO          540    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08002e32   0x00000002   Code   RO          541    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08002e34   0x0000000e   Code   RO          542    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08002e42   0x00000002   PAD
+    0x08002e44   0x00000020   Data   RO          538    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000720, Max: 0x0000c000, ABSOLUTE, COMPRESSED[0x00000090])
@@ -728,20 +727,20 @@ Memory Map of the image
     0x20000278   0x00000008   Data   RW          427    .data               can_database.o
     0x20000280   0x00000004   Data   RW          428    .data               can_database.o
     0x20000284   0x00000004   Data   RW          429    .data               can_database.o
-    0x20000288   0x00000002   Data   RW          430    .data               can_database.o
-    0x2000028a   0x00000008   Data   RW          431    .data               can_database.o
-    0x20000292   0x00000008   Data   RW          432    .data               can_database.o
-    0x2000029a   0x00000008   Data   RW          433    .data               can_database.o
-    0x200002a2   0x00000007   Data   RW          434    .data               can_database.o
-    0x200002a9   0x00000007   Data   RW          435    .data               can_database.o
-    0x200002b0   0x00000008   Data   RW          437    .data               can_database.o
-    0x200002b8   0x00000008   Data   RW          438    .data               can_database.o
-    0x200002c0   0x00000008   Data   RW          459    .data               command.o
-    0x200002c8   0x00000008   Data   RW          482    .data               systick.o
-    0x200002d0   0x0000001a   Zero   RW          393    .bss                pwm.o
-    0x200002ea   0x00000002   PAD
-    0x200002ec   0x00000030   Zero   RW          456    .bss                command.o
-    0x2000031c   0x00000004   PAD
+    0x20000288   0x00000004   Data   RW          430    .data               can_database.o
+    0x2000028c   0x00000008   Data   RW          431    .data               can_database.o
+    0x20000294   0x00000008   Data   RW          432    .data               can_database.o
+    0x2000029c   0x00000008   Data   RW          433    .data               can_database.o
+    0x200002a4   0x00000007   Data   RW          434    .data               can_database.o
+    0x200002ab   0x00000007   Data   RW          435    .data               can_database.o
+    0x200002b2   0x00000008   Data   RW          437    .data               can_database.o
+    0x200002ba   0x00000008   Data   RW          438    .data               can_database.o
+    0x200002c2   0x00000008   Data   RW          459    .data               command.o
+    0x200002ca   0x00000002   PAD
+    0x200002cc   0x00000008   Data   RW          482    .data               systick.o
+    0x200002d4   0x0000001a   Zero   RW          393    .bss                pwm.o
+    0x200002ee   0x00000002   PAD
+    0x200002f0   0x00000030   Zero   RW          456    .bss                command.o
     0x20000320   0x00000400   Zero   RW          172    STACK               startup_stm32f10x_md.o
 
 
@@ -752,16 +751,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       672         26          0          0          0       2497   can.o
-       160         14          0        620          0       3391   can_database.o
-       384         46          0          8         48       2465   command.o
+       672         26          0          0          0       2473   can.o
+       160         14          0        622          0       3355   can_database.o
+       344         36          0          8         48       2453   command.o
          0          0          0          0          0         32   core_cm3.o
-       116          6          0          4          0     215927   delay.o
-        88          8          0          0          0        494   led.o
-        96         12          0          4          0     244690   main.o
+       116          6          0          4          0     215863   delay.o
+        88          8          0          0          0        482   led.o
+        96         12          0          4          0     244610   main.o
        176         18          0          0          0     214277   misc.o
-       956         50          0         20          0       3670   on_off_status.o
-       472         30          0         16         26       1920   pwm.o
+       956         50          0         20          0       3638   on_off_status.o
+       472         30          0         16         26       1896   pwm.o
         36          8        236          0       1024        764   startup_stm32f10x_md.o
       1764         40          0          0          0       7116   stm32f10x_can.o
        232          8          0          0          0       4007   stm32f10x_exti.o
@@ -771,13 +770,13 @@ Image component sizes
       2800         84          0          0          0      17982   stm32f10x_tim.o
        816         20          0          0          0       7096   stm32f10x_usart.o
        344         34          0         20          0       1595   system_stm32f10x.o
-       152         18          0          8          0      16588   systick.o
-       472         20          0          0          0       1670   uart.o
+       152         18          0          8          0      16540   systick.o
+       472         20          0          0          0       1658   uart.o
 
     ----------------------------------------------------------------------
-     11056        510        268        720       1104     802900   Object Totals
+     11016        500        268        724       1100     802556   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         0          0          0          0          6          0   (incl. Padding)
+         0          0          0          2          2          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -820,15 +819,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     11648        526        268        720       1104     800868   Grand Totals
-     11648        526        268        144       1104     800868   ELF Image Totals (compressed)
-     11648        526        268        144          0          0   ROM Totals
+     11608        516        268        724       1100     800472   Grand Totals
+     11608        516        268        144       1100     800472   ELF Image Totals (compressed)
+     11608        516        268        144          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                11916 (  11.64kB)
+    Total RO  Size (Code + RO Data)                11876 (  11.60kB)
     Total RW  Size (RW Data + ZI Data)              1824 (   1.78kB)
-    Total ROM Size (Code + RO Data + RW Data)      12060 (  11.78kB)
+    Total ROM Size (Code + RO Data + RW Data)      12020 (  11.74kB)
 
 ==============================================================================
 

@@ -31,7 +31,7 @@
 ### ADS-LD Output File: 'On_Off_Status.axf'
 ### ADS-LD Command File: 'On_Off_Status.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'On_Off_Status.lnp', Handle=0x000010F8
+### Creating CmdFile 'On_Off_Status.lnp', Handle=0x000003BC
 ### Writing '.lnp' file
 ### ADS-LD Command file 'On_Off_Status.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

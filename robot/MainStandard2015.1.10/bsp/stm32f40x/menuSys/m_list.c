@@ -82,9 +82,10 @@ struct M_Type M_PID[M_NUM]=
 		{"5.keep",      M_UFunc,        KeepTest,			 {MainMenu, NULL} },
 		{"6.RouteTest", M_UFunc,        RouteTest,			{MainMenu, NULL} },
 		{"7.test_elevator",    M_UFunc,        test_elevator,			     {MainMenu, NULL} },
+		{"8.stepper_fan",    M_UFunc,        stepper_fan,			     {MainMenu, NULL} },
 };
 
-struct M_Type M_SD[M_NUM]=
+struct M_Type M_SD[M_NUM]=   
 {   /*Name          菜单属性		函数			节点(上下级指针)*/
     {"1.ReInit",    M_UFunc,        SD_ReInit,		{MainMenu, NULL} },
     {"2.WalkGRD",   M_UFunc,        SD_Walkground,	{MainMenu, NULL} },

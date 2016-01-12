@@ -21,7 +21,7 @@
 	void Moto_Clear_NPos(ID_NUMDEF ID_NUM);
 	void Moto_Set_GSpeed(ID_NUMDEF ID_NUM, int16_t speed ); 
 	
-	void SET_BAT_FUNC(void);
+	void SET_FAN_FUNC(void);
 	
 extern 	u8 IO_State[8];//电机控制盒上的ST的状态，比如:电机1对应 IO_State[0]
 extern float	Motor_Pos[8];//电机的绝对位置，比如:电机1对应 Motor_Pos[0]

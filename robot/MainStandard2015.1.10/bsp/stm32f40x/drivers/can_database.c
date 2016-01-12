@@ -81,7 +81,7 @@ union fi32_to_u8 MOSI_MOTOR8_ANGLE;
 union fi32_to_u8 MOSI_MOTOR9_SPEED;
 union fi32_to_u8 MOSI_MOTOR9_ANGLE;
 
-union fi64_to_u8 MOSI_stepper;
+union fi32_to_u8 MOSI_STEPPER;
 
 union u16_to_u8 MOSI_STEER;
 union fi32_to_u8 MOSI_FACTOR;
@@ -109,6 +109,7 @@ uint8_t MISO_M8_ENC[7];
 uint8_t MOSI_SWITCH[4]={0x0,0x0,0x0,0x0};
 uint8_t MOSI_STATUS[4]={0x0,0x0,0x0,0x0};
 union fi64_to_u8 MOSI_PWM;
+union fi32_to_u8 MOSI_FAN;
 
 //SLAVER--CAMERA
 uint8_t MOSI_CAMERA1[8];
@@ -171,8 +172,9 @@ Can_Data Can_Database[]=
 	
 	//主控&&ISO协主控通信ID*/
 	{WRITE_ONLY,	W_PWM_ID,							(uint8_t *)(MOSI_PWM.u8_data),					8,	NULL,								2,	CAN_Filter_FIFO0},
-	{WRITE_ONLY,	W_STEPPER_ID,					(uint8_t *)(MOSI_stepper.u8_data),			8,	NULL,								1,	CAN_Filter_FIFO1},
+	{WRITE_ONLY,	W_STEPPER_ID,					(uint8_t *)(MOSI_STEPPER.u8_data),			4,	NULL,								2,	CAN_Filter_FIFO1},
 	{WRITE_ONLY,	S_SWITCH_ID,					(uint8_t *)(MOSI_SWITCH),								4,	NULL,								2,	CAN_Filter_FIFO1},
+	{WRITE_ONLY,	W_FAN_ID,							(uint8_t *)(MOSI_FAN.u8_data),					4,	NULL,								2,	CAN_Filter_FIFO1},
 	{WRITE_ONLY,	W_STEER_ID,						(uint8_t *)(MOSI_STEER.u8_data),				2,	NULL,								2,	CAN_Filter_FIFO0},
 	{READ_ONLY,		BACK_FACTOR_ID,				(uint8_t *)(MOSI_FACTOR.u8_data),				4,	S_FACTOR_FUNC,			2,	CAN_Filter_FIFO1},
 	{READ_ONLY,		W_STATUS_ID,					(uint8_t *)(MOSI_STATUS),								4,	S_STATUS_FUNC,			2,	CAN_Filter_FIFO1},

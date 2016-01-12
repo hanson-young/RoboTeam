@@ -75,13 +75,11 @@ void Moto_Stop(ID_NUMDEF ID_NUM)
  	W_MOTOR_OLD_FUNC(ID_NUM, 0 , 0 , CMD_STOP);
 }
 
+float fan_power = 0.0f;
 
-void SET_BAT_FUNC(void)
+void SET_FAN_FUNC(void)
 {
-	if(MOSI_BAT.u8_data[0]==1)
-		W_MOTOR_OLD_FUNC(W_MOTOR1_OLD_ID,0,-1000,CMD_SET_SG);
-	else if(MOSI_BAT.u8_data[0]==2)
-		W_MOTOR_OLD_FUNC(W_MOTOR1_OLD_ID,0,1000,CMD_SET_SG);
+	fan_power = MOSI_FAN.f32_data;
 }
 
 void Moto_Clear_NPos(ID_NUMDEF ID_NUM)	

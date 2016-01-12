@@ -59,7 +59,7 @@ NO.5~0	[	ID numbers				|	ID numbers  &  Others		]
 	//MOSI   B00-xxx-xxx
 		M_G_CMD_ID		= 0x00,		//主控向GPS板发命令的ID
 		//写数据命令
-		W_STEPPER_ID  = 0X01,
+		
 			//B00-001-xxx  写GPS数据
 		W_GPS_X_ID		= 0x08,
 		W_GPS_Y_ID		= 0x09,
@@ -168,7 +168,7 @@ NO.5~0	[	ID numbers				|	ID numbers  &  Others		]
 	//MISO   B11-0000-xx
 		S_SWITCH_ID		= 0xc5,
 		W_STEER_ID		= 0xc6,
-		W_BAT_ID		= 0xc7,
+		W_FAN_ID		= 0xc7,
 		
 //B11-0x1-xxx 主控&&camera通信ID*/
 	//MISO   B11-001-xxx     第xxx号camera
@@ -207,6 +207,7 @@ NO.5~0	[	ID numbers				|	ID numbers  &  Others		]
 		S_CAM4_TRANS     = 0xeb,
 		S_CAM5_TRANS     = 0xec,
 		BACK_FACTOR_ID   = 0xed,
+		W_STEPPER_ID     = 0xee,
 		W_STATUS_ID      = 0xef,
 	}ID_NUMDEF;	
 	
@@ -306,11 +307,11 @@ NO.5~0	[	ID numbers				|	ID numbers  &  Others		]
 	extern union fi32_to_u8 MOSI_MOTOR9_SPEED;
 	extern union fi32_to_u8 MOSI_MOTOR9_ANGLE;
 
-  extern union fi64_to_u8 MOSI_stepper;
+  extern union fi32_to_u8 MOSI_STEPPER;
   
  extern union u16_to_u8 MOSI_STEER;
  
-	extern union u16_to_u8 MOSI_BAT;
+	extern union fi32_to_u8 MOSI_FAN;
 	
 	extern uint8_t MOSI_MOTOR1_OLD[8];
 	extern uint8_t MOSI_MOTOR2_OLD[8];

@@ -72,7 +72,7 @@ void rt_thread_userhook(void)
 }
 int rt_count_read()
 {
-	return rt_count;
+	return rt_count;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 }
 void rt_count_reset()
 {

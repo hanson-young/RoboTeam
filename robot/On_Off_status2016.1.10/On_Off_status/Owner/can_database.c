@@ -18,7 +18,7 @@ union fi64_to_u8 MOSI_UP_PWM;
 union fi32_to_u8 MOSI_MOTOR_ANGLE;
 union fi32_to_u8 MOSI_FACTOR;
 
-union u16_to_u8 MOSI_BAT;
+union fi32_to_u8 MOSI_FAN;
 uint8_t MOSI_MOTOR5_OLD[8];
 uint8_t MOSI_MOTOR3_OLD[8];
 uint8_t MOSI_MOTOR6_OLD[8];
@@ -53,7 +53,7 @@ Can_Data Can_Database[]=
 	{READ_ONLY,	  	W_MOTOR3_OLD_ID,	(uint8_t *)(MOSI_MOTOR3_OLD)					,8,		NULL,									1,			CAN_Filter_FIFO1},
 //	{WRITE_ONLY,	W_UP_PWM_ID,			(uint8_t *)(MOSI_UP_PWM.u8_data)		,8,		W_UP_PWM_FUNC,			1,			CAN_Filter_FIFO1},
 //	{READ_ONLY,	S_Play_ID,			(uint8_t *)(MOSI_Play.u8_data)		,8,		NULL,			1,			CAN_Filter_FIFO1},
-	{WRITE_ONLY,	  W_BAT_ID,					(uint8_t *)(MOSI_BAT.u8_data)					,2,		SET_BAT_FUNC,					1,			CAN_Filter_FIFO0},
+	{WRITE_ONLY,	  W_FAN_ID,					(uint8_t *)(MOSI_FAN.u8_data)					,4,		SET_FAN_FUNC,					1,			CAN_Filter_FIFO0},
 };
 
 //HASH_TABLE初始值为255，认为Can_Data_Num值小于256，即设备数少于256个
